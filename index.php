@@ -64,16 +64,18 @@
 				$no = 1;
 			?>
 				<tr>
-					<td><?php echo $no++; ?></td>
+					<td><?php echo $no; ?></td>
 					<td><?php echo $row[1]; ?></td>
 					<td><?php echo $row[2]; ?></td>
 					<td><?php echo $row[3]; ?></td>
 				</tr>	
 			<?php
+					$no++;
 				}
 
 				sqlsrv_free_stmt( $stmt);  
-				sqlsrv_close( $conn);  
+				sqlsrv_close( $conn); 
+				
 			}
 		?>
 	</table>
