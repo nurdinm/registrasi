@@ -7,7 +7,7 @@
 		$email = $_POST['email'];
 		$job = $_POST['job'];
 
-		$query = "INSERT INTO dbo.tb_register (name,email,job) VALUES ($name,$email,$job);";
+		$query = "INSERT INTO dbo.tb_regis (name,email,job) VALUES ($name,$email,$job);";
 
 		$stmt = sqlsrv_query($conn, $query);
 
@@ -56,7 +56,7 @@
 
 		<?php
 			if(isset($_POST['load'])){
-				$query = "SELECT * FROM dbo.tb_register;";
+				$query = "SELECT * FROM dbo.tb_regis;";
 
 				$stmt = sqlsrv_query($conn, $query);
 
