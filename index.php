@@ -46,7 +46,7 @@
 
 	<h3>People Who Are Registered:</h3>
 
-	<table>
+	<table style="border:1px solid black;border-collapse:collapse;" border=1>
 		<tr>
 			<td>No </td>
 			<td>Nama </td>
