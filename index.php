@@ -48,6 +48,7 @@
 
 	<table>
 		<tr>
+			<td>No </td>
 			<td>Nama </td>
 			<td>Email </td>
 			<td>Job </td>
@@ -60,12 +61,13 @@
 				$stmt = sqlsrv_query($conn, $query);
 
 				while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)) {
-
+				$no = 1;
 			?>
 				<tr>
-					<td><?php echo $row[0]; ?></td>
+					<td><?php echo $no++; ?></td>
 					<td><?php echo $row[1]; ?></td>
 					<td><?php echo $row[2]; ?></td>
+					<td><?php echo $row[3]; ?></td>
 				</tr>	
 			<?php
 				}
