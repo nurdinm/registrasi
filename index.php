@@ -55,22 +55,22 @@
 		</tr>
 
 		<?php
+			$no = 1;
 			if(isset($_POST['load'])){
 				$query = "SELECT * FROM dbo.tb_regis;";
 
 				$stmt = sqlsrv_query($conn, $query);
-				$no = 1;
+				
 				while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)) {
 				
 			?>
 				<tr>
-					<td><?php echo $no; ?></td>
+					<td><?php echo $no++; ?></td>
 					<td><?php echo $row[1]; ?></td>
 					<td><?php echo $row[2]; ?></td>
 					<td><?php echo $row[3]; ?></td>
 				</tr>	
 			<?php
-					$no++;
 				}
 
 				sqlsrv_free_stmt( $stmt);  
