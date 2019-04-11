@@ -59,9 +59,9 @@
 				$query = "SELECT * FROM dbo.tb_regis;";
 
 				$stmt = sqlsrv_query($conn, $query);
-
-				while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)) {
 				$no = 1;
+				while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_NUMERIC)) {
+				
 			?>
 				<tr>
 					<td><?php echo $no; ?></td>
